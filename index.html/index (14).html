@@ -1,0 +1,3445 @@
+ <!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muxtor Avezov Universiteti</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+     <link rel="stylesheet" href="stayle.css" />
+         
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-bg {
+            background: linear-gradient(135deg, #1a365d 0%, #2563eb 100%);
+            animation: gradientShift 15s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .faculty-card {
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            border-left: 4px solid #2563eb;
+        }
+        
+        .faculty-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .animate-float {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: #f59e0b;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .scroll-down {
+            animation: bounce 2s infinite;
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-20px); }
+            60% { transform: translateY(-10px); }
+        }
+        
+        .stats-counter {
+            font-feature-settings: "tnum";
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .counter-value {
+            display: inline-block;
+        }
+    </style>
+</head>
+ 
+
+
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50 transition-all duration-400" id="navbar">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <!-- Animated circular logo container -->
+                <div class="relative h-40 w-40 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 shadow-md hover:shadow-lg transition-all duration-300 transform hover:rotate-12 hover:scale-110">
+                    <!-- Logo image with circular mask -->
+                    <img src="logo.jpg" 
+                         alt="Muxtor Avezov Universiteti Logo" 
+                         class="absolute inset-0 h-full w-full rounded-full object-cover p-1.5 hover:p-1 transition-all duration-400">
+                </div>
+                <span class="font-bold text-xl text-blue-800">Muxtor Avezov Universiteti</span>
+            </div>
+            <!-- Rest of your navigation code -->
+    <!-- Add this to your <head> -->
+<style>
+    @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+    }
+    .logo-animate {
+        animation: pulse 3s infinite;
+    }
+    .logo-container:hover .logo-animate {
+        animation: spin 1s linear;
+    }
+    @keyframes spin {
+        from { transform: rotate(50%); }
+        to { transform: rotate(360deg); }
+    }
+</style>
+
+<!-- And modify your logo container like this: -->
+<div class="logo-container relative h-30 w-30 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 shadow-md transition-all duration-300">
+    <img src="" 
+         alt="Muxtor Avezov Universiteti Logo" 
+         class="logo-animate absolute inset-0 h-full w-full rounded-full object-cover p-1.5">
+</div>
+
+<div class="hidden md:flex space-x-8">
+    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Bosh sahifa</a>
+    <a href="#faculties" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Fakultetlar</a>
+    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Biz haqimizda</a>
+    <a href="#news" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Universitet yangiliklari</a>
+    <a href="#partnerships" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Xalqaro hamkorliklar</a>
+    <a href="#events" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Universitet tadbirlari</a>
+    <a href="#rector" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Rektor</a>
+    <a href="#vice-rectors" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Prorektorlar</a>
+    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Aloqa</a>
+    <a href="#tuition-fees" class="nav-link text-gray-700 hover:text-blue-600 font-medium">Kontrakt narxlari</a>
+   
+
+</div>
+
+
+            </div>
+            
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="container mx-auto px-4 py-2 flex flex-col space-y-3">
+                <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium py-2">Bosh sahifa</a>
+                <a href="#faculties" class="text-gray-700 hover:text-blue-600 font-medium py-2">Fakultetlar</a>
+                <a href="#about" class="text-gray-700 hover:text-blue-600 font-medium py-2">Biz haqimizda</a>
+                <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium py-2">Aloqa</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center justify-center bg-gradient-to-r from-blue-900 to-blue-600 bg-size-200 relative overflow-hidden">
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-20 left-10 w-40 h-40 bg-yellow-400 rounded-full opacity-20 animate-float" style="animation-delay: 0s;"></div>
+            <div class="absolute top-60 right-20 w-60 h-60 bg-blue-300 rounded-full opacity-20 animate-float" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-20 left-1/3 w-80 h-80 bg-green-400 rounded-full opacity-10 animate-float" style="animation-delay: 2s;"></div>
+        </div>
+        
+        <div class="container mx-auto px-4 py-16 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                        <span class="block transform transition-all duration-1000">Muxtor Avezov</span>
+                        <span class="block text-yellow-400 mt-2">Universiteti</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8 max-w-lg mx-auto md:mx-0">Zamonaviy ta'lim, yorqin kelajak. Bizning universitetimiz sizning muvaffaqiyatingiz uchun poydevor.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center md:justify-start">
+                        <a href="#faculties" class="bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                            Fakultetlar
+                        </a>
+                        <a href="#about" class="bg-transparent border-2 border-white text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-blue-800 transition-all duration-300">
+                            Batafsil ma'lumot
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <svg class="w-full max-w-lg animate-float" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="#ffffff" fill-opacity="0.15" d="M488.5,274.5Q401,349,337,393Q273,437,173,414.5Q73,392,56.5,271Q40,150,135.5,79.5Q231,9,336,54.5Q441,100,508.5,175Q576,250,488.5,274.5Z" />
+                        </svg>
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <svg class="w-3/4 h-3/4" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M256 21.3L32 128v256l224 106.7L480 384V128L256 21.3z" stroke="white" stroke-width="12" fill="none"/>
+                                <path d="M256 128l224-53.3M256 128v256M256 128L32 74.7M112 176v128M400 176v128" stroke="white" stroke-width="8" fill="none"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white text-center">
+                <p class="mb-2">Pastga o'tish</p>
+                <div class="scroll-down">
+                    <svg class="w-6 h-6 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 stats-counter" data-target="18">11</div>
+                    <span>+</span>
+                    <p class="text-gray-600 mt-2">Fakultetlar</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 stats-counter" data-target="5000">400</div>
+                    <span>+</span>
+                    <p class="text-gray-600 mt-2">Talabalar</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 stats-counter" data-target="250">12</div>
+                    <span>+</span>
+                    <p class="text-gray-600 mt-2">O'qituvchilar</p>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl font-bold text-blue-600 stats-counter" data-target="45">45</div>
+                    <span>+</span>
+                    <p class="text-gray-600 mt-2">Yillik tajriba</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculties Section -->
+    <section id="faculties" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Bizning Fakultetlar</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Muxtor Avezov Universitetida taklif etiladigan fakultetlar ro'yxati bilan tanishing va o'zingizga mos yo'nalishni tanlang.</p>
+                <div class="w-20 h-1 bg-blue-600 mx-auto mt-6"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Faculty Cards -->
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-chart-line text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6В04110 Iqtisod</h3>
+                    </div>
+                    <p class="text-gray-600">Iqtisodiy nazariya, makroiqtisod, mikroiqtisod va moliya sohasida chuqur bilim va ko'nikmalar.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-balance-scale text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б04210 Huquqshunoslik</h3>
+                    </div>
+                    <p class="text-gray-600">Huquqiy bilimlar, qonunchilik va sud tizimi bo'yicha professional ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-globe text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б04220 Xalqaro aloqalar</h3>
+                    </div>
+                    <p class="text-gray-600">Xalqaro munosabatlar, diplomatiya va global siyosat bo'yicha chuqur bilimlar.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-dna text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б05120 Biotexnologiya</h3>
+                    </div>
+                    <p class="text-gray-600">Zamonaviy biologik texnologiyalar va ularning amaliy qo'llanilishi bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-leaf text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б05210 Ekologiya</h3>
+                    </div>
+                    <p class="text-gray-600">Atrof-muhit muhofazasi va ekologik muammolarni hal qilish bo'yicha mutaxassislik.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-laptop-code text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б06120 Axborot tizimi</h3>
+                    </div>
+                    <p class="text-gray-600">Kompyuter tizimlari, dasturlash va axborot texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-cogs text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07110 Avtomatlashtirish va boshqarish</h3>
+                    </div>
+                    <p class="text-gray-600">Ishlab chiqarish jarayonlarini avtomatlashtirish va boshqarish tizimlari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-tools text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07120 Mashina yasash</h3>
+                    </div>
+                    <p class="text-gray-600">Mashina va mexanizmlarni loyihalash, ishlab chiqarish va ta'mirlash bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-truck text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07130 Transport, transport texnikasi va texnologiyasi</h3>
+                    </div>
+                    <p class="text-gray-600">Transport vositalari va ularning texnologiyalari bo'yicha mutaxassislik.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-bolt text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07150 Elektroenergetika</h3>
+                    </div>
+                    <p class="text-gray-600">Elektr energiyasi ishlab chiqarish, uzatish va taqsimlash bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-flask text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07120 Biorganikalik narsalarni ximiyalik texnologiyasi</h3>
+                    </div>
+                    <p class="text-gray-600">Biorganik moddalar va ularning kimyoviy texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-atom text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07170 Organikalik narsalarning ximiyalik texnologiyasi</h3>
+                    </div>
+                    <p class="text-gray-600">Organik moddalar va ularning kimyoviy texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-oil-can text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07210 Neft gaz ishi</h3>
+                    </div>
+                    <p class="text-gray-600">Neft va gaz qazib olish, qayta ishlash va transportirovka qilish bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-industry text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07220 Metallurgiya</h3>
+                    </div>
+                    <p class="text-gray-600">Metallarni qayta ishlash va metallurgiya jarayonlari bo'yicha mutaxassislik.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-apple-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07253 Oziq-ovqat xavfsizligi va muhandislik</h3>
+                    </div>
+                    <p class="text-gray-600">Oziq-ovqat mahsulotlari xavfsizligi va ishlab chiqarish texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-tshirt text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07260 Toqima materiallarning loyihasi va texnologiyasi</h3>
+                    </div>
+                    <p class="text-gray-600">To'qimachilik mahsulotlari dizayni va ishlab chiqarish texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б07340 Qurilish materiallari, buyumlarini ishlab chiqarish</h3>
+                    </div>
+                    <p class="text-gray-600">Qurilish materiallari va buyumlarini ishlab chiqarish texnologiyalari bo'yicha ta'lim.</p>
+                </div>
+                
+                <div class="faculty-card p-6 rounded-lg shadow-md hover:shadow-xl transition-all duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-shield-alt text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-800">6Б11210 Atrof-muhitini muhofaza qilish va hayot tirikchiligining xavfsizligi</h3>
+                    </div>
+                    <p class="text-gray-600">Atrof-muhit muhofazasi va hayot xavfsizligi bo'yicha mutaxassislik.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+         
+   <!-- Magistratura Section -->
+<section id="magistratura" class="bg-white py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">🎓 Magistratura yo‘nalishlari</h2>
+    <p class="text-gray-600 text-lg mb-12">
+      Quyidagi yo‘nalishlar bo‘yicha magistratura dasturlariga hujjat topshirishingiz mumkin.
+    </p>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <!-- Card 1 -->
+      <div class="bg-gradient-to-br from-green-100 to-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in">
+        <h3 class="text-xl font-semibold text-green-700 mb-2">7M05210</h3>
+        <p class="text-gray-800 font-bold text-lg">Ekologiya</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-gradient-to-br from-blue-100 to-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-blue-700 mb-2">7M06120</h3>
+        <p class="text-gray-800 font-bold text-lg">Axborot tizimi</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="bg-gradient-to-br from-yellow-100 to-white rounded-xl shadow-md p-6 hover:shadow-lg transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-yellow-700 mb-2">7M04110</h3>
+        <p class="text-gray-800 font-bold text-lg">Iqtisodiyot</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+   <!-- Qabul Bo'limi -->
+<section id="admission" class="py-16 bg-gradient-to-b from-blue-50 to-white">
+  <div class="container mx-auto px-4">
+    <!-- Sarlavha -->
+    <div class="text-center mb-16 animate-fadeInUp">
+      <h2 class="text-4xl font-bold text-center mb-4 text-blue-800 relative inline-block">
+        <span class="relative z-10">2025-2026 O'quv Yili Qabuli</span>
+        <span class="absolute bottom-0 left-0 w-full h-2 bg-blue-200 rounded-full -z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-700 origin-left"></span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Universitetimizga hujjat topshirish jarayoni va qabul qoidalari
+      </p>
+    </div>
+
+    <!-- Qabul bosqichlari -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <!-- Bosqich 1 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-100">
+        <div class="relative mb-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            1
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-200 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-center group-hover:text-blue-700 transition-colors duration-500">Ariza topshirish</h3>
+        <p class="text-gray-600 text-center mb-4 group-hover:text-gray-800 transition-colors duration-500">
+          Online ariza platformasi orqali hujjatlaringizni yuklang va ariza topshiring
+        </p>
+        <div class="text-center">
+          <span class="inline-block bg-blue-100 text-blue-800 text-sm px-4 py-1 rounded-full transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            15.06 - 25.07.2024
+          </span>
+        </div>
+      </div>
+
+      <!-- Bosqich 2 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-200">
+        <div class="relative mb-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            2
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-200 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-center group-hover:text-blue-700 transition-colors duration-500">Suxbat sinovlari</h3>
+        <p class="text-gray-600 text-center mb-4 group-hover:text-gray-800 transition-colors duration-500">
+          Fanlar bo'yicha Suxbat sinovlari va intervyu bosqichlaridan o'ting
+        </p>
+        <div class="text-center">
+          <span class="inline-block bg-blue-100 text-blue-800 text-sm px-4 py-1 rounded-full transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            01.08 - 10.08.2024
+          </span>
+        </div>
+      </div>
+
+      <!-- Bosqich 3 -->
+      <div class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-300">
+        <div class="relative mb-6">
+          <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-2xl font-bold transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            3
+          </div>
+          <div class="absolute top-0 left-0 w-full h-full rounded-full border-2 border-blue-200 animate-ping opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        </div>
+        <h3 class="text-xl font-semibold mb-3 text-center group-hover:text-blue-700 transition-colors duration-500">Natijalar e'lon qilinishi</h3>
+        <p class="text-gray-600 text-center mb-4 group-hover:text-gray-800 transition-colors duration-500">
+          Qabul qilingan talabalar ro'yxati va shartnoma imzolash jarayoni
+        </p>
+        <div class="text-center">
+          <span class="inline-block bg-blue-100 text-blue-800 text-sm px-4 py-1 rounded-full transition-all duration-500 group-hover:bg-blue-600 group-hover:text-white">
+            25.08.2024
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kerakli Hujjatlar Section -->
+<section id="kerakli-hujjatlar" class="bg-gray-50 py-20 px-6">
+  <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+    <h2 class="text-4xl font-bold text-gray-800 mb-4">📄 Kerakli hujjatlar</h2>
+    <p class="text-gray-600 text-lg mb-12">
+      Universitetga hujjat topshirish uchun quyidagi hujjatlar talab etiladi.
+    </p>
+
+    <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3" data-aos="fade-up" data-aos-delay="100">
+      <!-- Hujjat 1 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in">
+        <div class="text-blue-600 text-3xl mb-4">🪪</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Pasport (asl nusxa)</h3>
+        <p class="text-gray-600">Pasportingiz asl nusxasi va 2 nusxasi topshiriladi.</p>
+      </div>
+
+      <!-- Hujjat 2 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="100">
+        <div class="text-blue-600 text-3xl mb-4">🎓</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Diplom (bakalavr)</h3>
+        <p class="text-gray-600">Bakalavr diplomi va ilovasi nusxasi bilan birga taqdim etiladi.</p>
+      </div>
+
+      <!-- Hujjat 3 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="200">
+        <div class="text-blue-600 text-3xl mb-4">📷</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">3.5x4.5 fotosurat</h3>
+        <p class="text-gray-600">6 dona rasm – oq fonda, so‘nggi 3 oy ichida olingan bo‘lishi kerak.</p>
+      </div>
+
+      <!-- Hujjat 4 (ixtiyoriy qo‘shimcha) -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="300">
+        <div class="text-blue-600 text-3xl mb-4">📑</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">Ariza</h3>
+        <p class="text-gray-600">Magistraturaga qabul uchun maxsus ariza shaklini to‘ldirish lozim.</p>
+      </div>
+
+      <!-- Hujjat 5 -->
+      <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition duration-500 transform hover:-translate-y-1 hover:scale-105" data-aos="zoom-in" data-aos-delay="400">
+        <div class="text-blue-600 text-3xl mb-4">🧾</div>
+        <h3 class="text-xl font-semibold text-gray-800 mb-2">To‘lov kvitansiyasi</h3>
+        <p class="text-gray-600">Imtihon yoki ariza topshirish to‘lovi to‘langanini tasdiqlovchi hujjat.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Yo'nalishlar va grantlar -->
+    <div class="grid lg:grid-cols-2 gap-12 mb-16">
+      <!-- Yo'nalishlar -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp delay-400">
+        <div class="bg-blue-600 px-6 py-4">
+          <h3 class="text-xl font-semibold text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />
+            </svg>
+            Ta'lim Yo'nalishlari
+          </h3>
+        </div>
+        <div class="p-6">
+          <div class="space-y-4">
+            <!-- Yo'nalish 1 -->
+            <div class="flex items-start group">
+              <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg text-blue-600 mr-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Dasturiy Injiniring</h4>
+                <p class="text-sm text-gray-600">Bakalavr, 4 yil</p>
+              </div>
+            </div>
+            
+            <!-- Yo'nalish 2 -->
+            <div class="flex items-start group">
+              <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg text-blue-600 mr-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Iqtisodiyot</h4>
+                <p class="text-sm text-gray-600">Bakalavr, 4 yil</p>
+              </div>
+            </div>
+            
+            <!-- Yo'nalish 3 -->
+            <div class="flex items-start group">
+              <div class="flex-shrink-0 bg-blue-100 p-2 rounded-lg text-blue-600 mr-4 transition-all duration-300 group-hover:bg-blue-600 group-hover:text-white">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Bino Qurilishi</h4>
+                <p class="text-sm text-gray-600">Bakalavr, 4 yil</p>
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">
+              Barcha yo'nalishlar
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grantlar -->
+      <div class="bg-white rounded-xl shadow-lg overflow-hidden animate-fadeInUp delay-500">
+        <div class="bg-blue-600 px-6 py-4">
+          <h3 class="text-xl font-semibold text-white flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v13m8-8v7m-16-8v7m8-18a4 4 0 00-4 4v1a4 4 0 004 4 4 4 0 004-4V7a4 4 0 00-4-4z" />
+            </svg>
+            Grant va To'lov Shartlari
+          </h3>
+        </div>
+        <div class="p-6">
+          <div class="space-y-6">
+            <!-- Grant 1 -->
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg group hover:bg-blue-100 transition-colors duration-300">
+              <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-blue-600 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Davlat granti</h4>
+                <p class="text-sm text-gray-600">Test sinovida yuqori natija ko'rsatgan talabalar uchun</p>
+              </div>
+              <div class="ml-auto bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
+                Ochiq
+              </div>
+            </div>
+            
+            <!-- Grant 2 -->
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg group hover:bg-blue-100 transition-colors duration-300">
+              <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-blue-600 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">50% chegirma</h4>
+                <p class="text-sm text-gray-600">Test sinovida yaxshi natija ko'rsatgan talabalar uchun</p>
+              </div>
+              <div class="ml-auto bg-green-100 text-green-800 text-xs px-3 py-1 rounded-full">
+                Ochiq
+              </div>
+            </div>
+            
+            <!-- Grant 3 -->
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg group hover:bg-blue-100 transition-colors duration-300">
+              <div class="flex-shrink-0 w-12 h-12 bg-white rounded-full shadow flex items-center justify-center text-blue-600 mr-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <div>
+                <h4 class="font-medium text-gray-800">Xalqaro grantlar</h4>
+                <p class="text-sm text-gray-600">Xalqaro hamkor universitetlar tavsiyasi bilan</p>
+              </div>
+              <div class="ml-auto bg-yellow-100 text-yellow-800 text-xs px-3 py-1 rounded-full">
+                Cheklangan
+              </div>
+            </div>
+          </div>
+          <div class="mt-6 text-center">
+            <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium transition-colors duration-300">
+              Batafsil ma'lumot
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ariza topshirish tugmasi -->
+    <div class="text-center animate-fadeInUp delay-600">
+      <div class="max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg mb-8">
+        <h3 class="text-2xl font-semibold mb-4 text-blue-800">Qabul jarayonida qatnashmoqchimisiz?</h3>
+        <p class="text-gray-600 mb-6">
+          Hoziroq onlayn ariza topshiring va 2025-2026 o'quv yilida universitetimiz talabasi bo'lish uchun birinchi qadamni tashlang!
+        </p>
+        <a href="#" class="inline-flex items-center justify-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-500 transform hover:-translate-y-1 shadow-lg hover:shadow-xl group">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+          </svg>
+          Ariza topshirish
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+        </a>
+      </div>
+      <p class="text-gray-500 text-sm">
+        Yordam kerakmi? <a href="#" class="text-blue-600 hover:text-blue-800 underline transition-colors duration-300">Qabul bo'limi bilan bog'laning</a>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Animatsiya uchun CSS -->
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+</style>
+               
+
+ <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --dark-color: #1b263b;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .logo h1 {
+            font-size: 1.5rem;
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        /* Main Content */
+        .container {
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .hero {
+            height: 70vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://images.unsplash.com/photo-1507842217343-583bb7270b66?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            opacity: 0.4;
+            z-index: -1;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+            animation: slideInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+            animation: slideInUp 1s ease;
+        }
+        
+        .search-box {
+            width: 100%;
+            max-width: 600px;
+            position: relative;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        .search-box input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box input:focus {
+            outline: none;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .search-box button {
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            background: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .search-box button:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        /* Books Section */
+        .books-section {
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            display: inline-block;
+            color: var(--dark-color);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: expandLine 1s ease;
+        }
+        
+        @keyframes expandLine {
+            from { width: 0; }
+            to { width: 50px; }
+        }
+        
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .book-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .book-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .book-cover {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .book-card:hover .book-cover img {
+            transform: scale(1.05);
+        }
+        
+        .book-info {
+            padding: 1.5rem;
+        }
+        
+        .book-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .book-info p {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .book-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            text-align: left;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            width: 30px;
+            height: 2px;
+            background: var(--accent-color);
+            bottom: -5px;
+            left: 0;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+        
+        .footer-column ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-column ul li a:hover {
+            color: var(--accent-color);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-links a {
+            color: white;
+            background: rgba(255, 255, 255, 0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 3rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        /* Animations */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-book-open"></i>
+            <h1>Virtual Kutubxona</h1>
+        </div>
+        <nav>
+            <ul style="display: flex; gap: 20px; list-style: none;">
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Bosh Sahifa</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Kitoblar</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Audio Kitoblar</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Biz Haqimizda</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="btn btn-outline" style="margin-right: 10px;">Kirish</button>
+            <button class="btn btn-primary">Ro'yxatdan o'tish</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h2>O'zingizga yoqqan kitoblarni toping</h2>
+            <p>Millionlab elektron kitoblar, audiokitoblar va ilmiy maqolalardan bepul foydalaning</p>
+            <div class="search-box">
+                <input type="text" placeholder="Kitob nomi, muallif yoki janr bo'yicha qidiruv...">
+                <button><i class="fas fa-search"></i> Qidirish</button>
+            </div>
+        </section>
+        
+        <section class="books-section">
+            <div class="section-title">
+                <h2>Ommabop Kitoblar</h2>
+            </div>
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="hoshimov.jpg" alt="Kitob muqovasi">
+                    </div>
+                    <div class="book-info">
+                        <h3>Dunyoning Ishlari</h3>
+                        <p>O'tkir Hoshimov</p>
+                        <div class="book-actions">
+                            <button class="btn btn-primary">O'qish</button>
+                            <button class="btn btn-outline">Saqlash</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="Abay.jpg" alt="Kitob muqovasi">
+                    </div>
+                    <div class="book-info">
+                        <h3>Qora so'zlari</h3>
+                        <p>Abay kunanbayev</p>
+                        <div class="book-actions">
+                            <button class="btn btn-primary">O'qish</button>
+                            <button class="btn btn-outline">Saqlash</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="orwell.jpg" alt="Kitob muqovasi">
+                    </div>
+                    <div class="book-info">
+                        <h3>1984</h3>
+                        <p>George Orwell</p>
+                        <div class="book-actions">
+                            <button class="btn btn-primary">O'qish</button>
+                            <button class="btn btn-outline">Saqlash</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="book-card">
+                    <div class="book-cover">
+                        <img src="tag'ay.jpg" alt="Kitob muqovasi">
+                    </div>
+                    <div class="book-info">
+                        <h3>Kecha va Kunduz</h3>
+                        <p>Tog'ay Murod</p>
+                        <div class="book-actions">
+                            <button class="btn btn-primary">O'qish</button>
+                            <button class="btn btn-outline">Saqlash</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="features">
+            <div class="section-title">
+                <h2>Bizning Afzalliklarimiz</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book-reader"></i>
+                    </div>
+                    <h3>Ko'p Turdagi Kitoblar</h3>
+                    <p>Har qanday yoqtirgan janringizdagi kitoblarni topishingiz mumkin</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-headphones"></i>
+                    </div>
+                    <h3>Audiokitoblar</h3>
+                    <p>Yo'l-yo'lakay yoki ishlab turgan paytingizda kitob tinglang</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Har Qanday Qurilmada</h3>
+                    <p>Telefon, planshet yoki kompyuteringizda o'qing</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Virtual Kutubxona</h3>
+                <p>Eng yaxshi elektron kitoblar platformasi. O'zbek va jahon adabiyotining durdona asarlari bir joyda.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-telegram"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            
+            
+        <div class="copyright">
+            <p>&copy; 2023 Virtual Kutubxona. Barcha huquqlar himoyalangan.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Scroll animatsiyalari
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header animatsiyasi
+            const header = document.querySelector('header');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll <= 0) {
+                    header.style.transform = 'translateY(0)';
+                    header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                } 
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScroll < lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(0)';
+                    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Kitob kartalariga hover effekti
+            const bookCards = document.querySelectorAll('.book-card');
+            
+            bookCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Feature kartalari animatsiyasi
+            const featureCards = document.querySelectorAll('.feature-card');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            featureCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                card.style.transition = `all 0.5s ease ${index * 0.1}s`;
+                observer.observe(card);
+            });
+            
+            // Search box focus effekti
+            const searchInput = document.querySelector('.search-box input');
+            
+            searchInput.addEventListener('focus', function() {
+                this.parentElement.style.transform = 'scale(1.02)';
+            });
+            
+            searchInput.addEventListener('blur', function() {
+                this.parentElement.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+
+
+ <div id="news" class="py-8 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-8 text-blue-800 relative inline-block">
+      <span class="relative z-10">Universitet Yangiliklari</span>
+      <span class="absolute bottom-0 left-0 w-full h-2 bg-blue-200 rounded-full -z-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></span>
+    </h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Yangilik kartasi 1 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="overflow-hidden">
+          <img src="festival.jpg" alt="Talabalar tadbiri" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Talabalar ishtirokidagi festival</h3>
+          <p class="text-gray-600 mb-4 transition-colors duration-300 group-hover:text-gray-800">Universitetimizda o‘tkazilgan yillik talabalar festivalida 50 dan ortiq talaba ishtirok etdi.</p>
+          <div class="flex items-center">
+            <span class="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full transition-all duration-300 group-hover:bg-blue-100">12.10.2023</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yangilik kartasi 2 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="overflow-hidden">
+          <img src="ekuskursiya.jpg" alt="Ekskursiya" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Talabalar Universitetlarga ekuskursiyasi</h3>
+          <p class="text-gray-600 mb-4 transition-colors duration-300 group-hover:text-gray-800">О‘zbekiston Respublikasi Prezidenti tomonidan “О‘zbekiston Respublikasi Qurolli Kuchlar tashkil etilganligining 33 yilligi hamda 14-yanvar Vatan himoyachilari kuni”ga bag‘ishlab universitet talabalarini Galaba bog‘iga ekskursiya tashkil etildi .</p>
+          <div class="flex items-center">
+            <span class="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full transition-all duration-300 group-hover:bg-blue-100">05.10.2023</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Yangilik kartasi 3 -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 group">
+        <div class="overflow-hidden">
+          <img src="qabul.jpg" alt="Qabul eloni" class="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-2 text-gray-800 group-hover:text-blue-600 transition-colors duration-300">Muxtor Avezov Universiteti
+2025-2026 O‘quv Yili Qabul Ochiq!
+</h3>
+          <p class="text-gray-600 mb-4 transition-colors duration-300 group-hover:text-gray-800">Yangi o'quv yili uchun qabul jarayoni boshlanganligi haqida ma'lumotKelajagingiz uchun eng yaxshi tanlov.
+Zamonaviy ta’lim, yorqin kelajak!
+Hoziroq ariza topshiring va orzularingiz sari qadam tashlang.
+.</p>
+          <div class="flex items-center">
+            <span class="text-sm text-blue-600 bg-blue-50 px-3 py-1 rounded-full transition-all duration-300 group-hover:bg-blue-100">01.10.2023</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barcha yangiliklar tugmasi -->
+    <div class="text-center mt-12">
+      <a href="#" class="inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-md hover:shadow-lg group">
+        <span>Barcha yangiliklar</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- Xalqaro Hamkorliklar Bo‘limi -->
+<section id="partnerships" class="py-20 bg-gradient-to-br from-blue-50 to-white overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Sarlavha -->
+    <div class="text-center mb-16" data-aos="fade-up">
+      <h2 class="text-4xl font-extrabold text-blue-800 mb-4 relative inline-block">
+        🌐 Xalqaro Hamkorliklar
+      </h2>
+      <p class="text-gray-600 text-lg max-w-2xl mx-auto">
+        Universitetimiz dunyoning 30 dan ortiq yetakchi oliy ta'lim muassasalari bilan mustahkam aloqalarga ega.
+      </p>
+    </div>
+
+    <!-- Hamkor logotiplari -->
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8" data-aos="fade-up" data-aos-delay="100">
+      
+      <!-- Reusable Hamkor Karta (Repeat for each partner) -->
+      <div class="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-500 transform hover:-translate-y-2 group">
+        <div class="p-6 flex items-center justify-center h-48"> <!-- KATTA KARTA UCHUN h-48 -->
+          <img src="hamkorlik.jpg" alt="Erasmus+" class="h-28 md:h-32 lg:h-36 transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl"></div>
+      </div>
+
+      <div class="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-500 transform hover:-translate-y-2 group">
+        <div class="p-6 flex items-center justify-center h-48">
+          <img src="rasm.jpg" alt="DAAD" class="h-28 md:h-32 lg:h-36 transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl"></div>
+      </div>
+
+      <div class="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-500 transform hover:-translate-y-2 group">
+        <div class="p-6 flex items-center justify-center h-48">
+          <img src="suxbat.jpg" alt="Fulbright" class="h-28 md:h-32 lg:h-36 transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl"></div>
+      </div>
+
+      <div class="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-500 transform hover:-translate-y-2 group">
+        <div class="p-6 flex items-center justify-center h-48">
+          <img src="rasm2.jpg" alt="Berlin Universiteti" class="h-28 md:h-32 lg:h-36 transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl"></div>
+      </div>
+
+      <div class="relative bg-white rounded-xl shadow-lg hover:shadow-2xl transition-transform duration-500 transform hover:-translate-y-2 group">
+        <div class="p-6 flex items-center justify-center h-48">
+          <img src="rasm3.jpg" alt="Kyoto Universiteti" class="h-28 md:h-32 lg:h-36 transition-transform duration-500 group-hover:scale-110" />
+        </div>
+        <div class="absolute inset-0 bg-blue-100 opacity-0 group-hover:opacity-20 transition-opacity duration-500 rounded-xl"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <!-- Hamkorlik turlari -->
+    <div class="grid md:grid-cols-3 gap-8 mb-16">
+      <!-- Talaba almashinuvi -->
+      <div class="bg-blue-50 p-6 rounded-lg hover:bg-white hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-300">
+        <div class="text-blue-600 mb-4 transition-all duration-500 group-hover:text-blue-800">
+          <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M8 9a3 3 0 100-6 3 3 0 000 6zM8 11a6 6 0 016 6H2a6 6 0 016-6z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center group-hover:text-blue-700 transition-colors duration-500">Talaba almashinuvi dasturlari</h3>
+        <p class="text-gray-600 text-center group-hover:text-gray-800 transition-colors duration-500">
+          Har yili 100 dan ortiq talabamiz Erasmus+, Mevlana va boshqa xalqaro dasturlar doirasida chet elda tahsil oladi
+        </p>
+        <div class="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Faol</span>
+        </div>
+      </div>
+
+      <!-- Qo'shma dasturlar -->
+      <div class="bg-blue-50 p-6 rounded-lg hover:bg-white hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-400">
+        <div class="text-blue-600 mb-4 transition-all duration-500 group-hover:text-blue-800">
+          <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center group-hover:text-blue-700 transition-colors duration-500">Qo'shma ta'lim dasturlari</h3>
+        <p class="text-gray-600 text-center group-hover:text-gray-800 transition-colors duration-500">
+          5 xalqaro universitet bilan "2+2" va "Ikki tomonlama diplom" dasturlari ishlab chiqilgan
+        </p>
+        <div class="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">Yangi</span>
+        </div>
+      </div>
+
+      <!-- Xalqaro loyihalar -->
+      <div class="bg-blue-50 p-6 rounded-lg hover:bg-white hover:shadow-xl transition-all duration-500 transform hover:-translate-y-3 group border border-blue-100 animate-fadeInUp delay-500">
+        <div class="text-blue-600 mb-4 transition-all duration-500 group-hover:text-blue-800">
+          <svg class="w-12 h-12 mx-auto" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clip-rule="evenodd"/>
+          </svg>
+        </div>
+        <h3 class="text-xl font-semibold mb-2 text-center group-hover:text-blue-700 transition-colors duration-500">Xalqaro ilmiy loyihalar</h3>
+        <p class="text-gray-600 text-center group-hover:text-gray-800 transition-colors duration-500">
+          Horizon Europe, COST va boshqa xalqaro grantlar asosida 15 dan ortiq ilmiy loyihalar amalga oshirilmoqda
+        </p>
+        <div class="mt-4 text-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="inline-block bg-blue-100 text-blue-800 text-xs px-3 py-1 rounded-full">15+ loyiha</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Xalqaro kelishuvlar jadvali -->
+    <div class="bg-blue-50 rounded-lg p-6 mb-16 hover:shadow-lg transition-all duration-500 animate-fadeInUp delay-600">
+      <h3 class="text-xl font-semibold mb-6 text-center group-hover:text-blue-700 transition-colors duration-500 relative">
+        <span class="relative z-10 inline-block px-4 bg-blue-50">Amaldagi Xalqaro Kelishuvlar</span>
+        <span class="absolute top-1/2 left-0 w-full h-px bg-blue-200 -z-0"></span>
+      </h3>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white rounded-lg overflow-hidden">
+          <thead>
+            <tr class="bg-blue-600 text-white">
+              <th class="py-4 px-6 text-left font-medium transition-all duration-300 hover:bg-blue-700 cursor-pointer">Hamkor</th>
+              <th class="py-4 px-6 text-left font-medium transition-all duration-300 hover:bg-blue-700 cursor-pointer">Mamlakat</th>
+              <th class="py-4 px-6 text-left font-medium transition-all duration-300 hover:bg-blue-700 cursor-pointer">Kelishuv turi</th>
+              <th class="py-4 px-6 text-left font-medium transition-all duration-300 hover:bg-blue-700 cursor-pointer">Boshlanish sanasi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-b border-blue-100 hover:bg-blue-50 transition-colors duration-300">
+              <td class="py-4 px-6">Berlin Texnika Universiteti</td>
+              <td class="py-4 px-6 flex items-center">
+                <span class="mr-2">🇩🇪</span> Germaniya
+              </td>
+              <td class="py-4 px-6">
+                <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Talaba almashinuvi</span>
+              </td>
+              <td class="py-4 px-6 font-medium">2021</td>
+            </tr>
+            <tr class="border-b border-blue-100 hover:bg-blue-50 transition-colors duration-300">
+              <td class="py-4 px-6">Kyoto Universiteti</td>
+              <td class="py-4 px-6 flex items-center">
+                <span class="mr-2">🇯🇵</span> Yaponiya
+              </td>
+              <td class="py-4 px-6">
+                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Qo'shma tadqiqot</span>
+              </td>
+              <td class="py-4 px-6 font-medium">2022</td>
+            </tr>
+            <tr class="border-b border-blue-100 hover:bg-blue-50 transition-colors duration-300">
+              <td class="py-4 px-6">Erasmus+</td>
+              <td class="py-4 px-6 flex items-center">
+                <span class="mr-2">🇪🇺</span> EU
+              </td>
+              <td class="py-4 px-6">
+                <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Mobililik dasturi</span>
+              </td>
+              <td class="py-4 px-6 font-medium">2020</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Bog'lanish uchun -->
+    <div class="text-center animate-fadeInUp delay-700">
+      <h3 class="text-xl font-semibold mb-2 group-hover:text-blue-700 transition-colors duration-500">Hamkorlik uchun ariza</h3>
+      <p class="text-gray-600 mb-6 max-w-2xl mx-auto group-hover:text-gray-800 transition-colors duration-500">
+        Xalqaro hamkorlik dasturlarida ishtirok etish uchun ariza qoldiring
+      </p>
+      <a href="#contact" class="inline-flex items-center bg-gradient-to-r from-blue-600 to-blue-500 hover:from-blue-700 hover:to-blue-600 text-white font-medium py-3 px-8 rounded-lg transition-all duration-500 transform hover:-translate-y-1 shadow-md hover:shadow-lg group">
+        <span>Bog'lanish</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Animatsiya uchun CSS -->
+<style>
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .animate-fadeInUp {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+  .delay-600 {
+    animation-delay: 0.6s;
+  }
+  .delay-700 {
+    animation-delay: 0.7s;
+  }
+</style>
+ 
+ 
+
+
+ <style>
+        :root {
+            --primary-color: #3a0ca3;
+            --secondary-color: #7209b7;
+            --accent-color: #4361ee;
+            --dark-color: #1a1a2e;
+            --light-color: #f8f9fa;
+        }
+        
+        * {
+
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            margin: auto;
+            background-color: #f5f5f5;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        /* Header Styles */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .logo i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .logo h1 {
+          
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* yanada ko‘rinadigan qilish uchun */
+}
+
+
+
+        
+        /* Main Content */
+        .container {
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+        
+        .hero {
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            padding: 0 2rem;
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover;
+            color: white;
+        }
+        
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: slideInDown 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin-bottom: 2rem;
+            animation: slideInUp 1s ease;
+        }
+        
+        /* Events Section */
+        .events-section {
+            padding: 4rem 2rem;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2rem;
+            display: inline-block;
+            color: var(--dark-color);
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 3px;
+            background: var(--accent-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: expandLine 1s ease;
+        }
+        
+        @keyframes expandLine {
+            from { width: 0; }
+            to { width: 50px; }
+        }
+        
+        .events-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        
+        .tab-btn {
+            padding: 10px 20px;
+            border-radius: 30px;
+            border: 1px solid var(--accent-color);
+            background: transparent;
+            color: var(--accent-color);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .tab-btn.active {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .tab-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .event-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            transform: translateY(0);
+            position: relative;
+        }
+        
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .event-media {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .event-media img, .event-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .event-card:hover .event-media img, 
+        .event-card:hover .event-media video {
+            transform: scale(1.05);
+        }
+        
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .play-btn i {
+            color: var(--accent-color);
+            font-size: 1.5rem;
+            margin-left: 5px;
+        }
+        
+        .event-media:hover .play-btn {
+            opacity: 1;
+        }
+        
+        .event-date {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .event-info {
+            padding: 1.5rem;
+        }
+        
+        .event-info h3 {
+            margin-bottom: 0.5rem;
+            color: var(--dark-color);
+        }
+        
+        .event-meta {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 1rem;
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .event-meta span {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .event-meta i {
+            color: var(--accent-color);
+        }
+        
+        .event-desc {
+            color: #555;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .event-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .btn {
+            padding: 8px 15px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--accent-color);
+            color: var(--accent-color);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent-color);
+            color: white;
+        }
+        
+        /* Upcoming Events */
+        .upcoming-section {
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #f5f7fa 0%, #dfe7f5 100%);
+        }
+        
+        .upcoming-event {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .upcoming-event {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        .upcoming-event:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .upcoming-media {
+            height: 300px;
+        }
+        
+        .upcoming-media img, .upcoming-media video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .upcoming-content {
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        .upcoming-content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--dark-color);
+        }
+        
+        .upcoming-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .upcoming-meta span {
+            background: rgba(67, 97, 238, 0.1);
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .upcoming-meta i {
+            font-size: 1rem;
+        }
+        
+        .upcoming-desc {
+            margin-bottom: 2rem;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        /* Video Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: flex;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            width: 80%;
+            max-width: 900px;
+            position: relative;
+        }
+        
+        .modal-content video {
+            width: 100%;
+            border-radius: 10px;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: -40px;
+            right: 0;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+        
+        /* Animations */
+        @keyframes slideInDown {
+            from {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes slideInUp {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+            
+            header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            nav ul {
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <i class="fas fa-calendar-alt"></i>
+            <h1>Universitet Tadbirlari</h1>
+        </div>
+        <nav>
+            <ul style="display: flex; gap: 20px; list-style: none;">
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Bosh Sahifa</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Tadbirlar</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Fotoalbom</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Videolar</a></li>
+                <li><a href="#" style="text-decoration: none; color: var(--dark-color); font-weight: 500;">Kontaktlar</a></li>
+            </ul>
+        </nav>
+        <div>
+            <button class="btn btn-outline" style="margin-right: 10px;">Kirish</button>
+            <button class="btn btn-primary">Ro'yxatdan o'tish</button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="hero">
+            <h2>Universitetimiz Tadbirlari</h2>
+            <p>Talabalar hayotining eng qiziqarli voqealari, marosimlar, tanlovlar va ilmiy tadbirlar</p>
+            <button class="btn btn-primary" style="padding: 12px 25px; font-size: 1.1rem;">Yaqindagi Tadbir</button>
+        </section>
+        
+        <section class="events-section">
+            <div class="section-title">
+                <h2>So'nggi Tadbirlar</h2>
+            </div>
+            
+            <div class="events-tabs">
+                <button class="tab-btn active">Barchasi</button>
+              
+            </div>
+            
+            <div class="events-grid">
+                <!-- Event 1 - Video bilan -->
+                <div class="event-card">
+                    <div class="event-media">
+                        <video poster="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="event-date">20.05.2023</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Bitiruvchilar Marosimi</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 10:00 - 12:00</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Asosiy Binolar</span>
+                        </div>
+                        <p class="event-desc">
+                            Universitetimizning 2022-2023 o'quv yili bitiruvchilari uchun tantanali marosim bo'lib o'tdi.
+                        </p>
+                        <div class="event-actions">
+                            <button class="btn btn-primary">Batafsil</button>
+                            <button class="btn btn-outline video-btn" data-video="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
+                                <i class="fas fa-video"></i> Ko'rish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 2 - Rasm bilan -->
+                <div class="event-card">
+                    <div class="event-media">
+                        <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Ilmiy konferensiya">
+                        <div class="event-date">15.05.2023</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Xalqaro Ilmiy Konferensiya</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 09:00 - 17:00</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Konferensiya zali</span>
+                        </div>
+                        <p class="event-desc">
+                            5 mamlakatdan kelgan olimlar ishtirokida "Zamonaviy texnologiyalar" mavzusida xalqaro konferensiya bo'lib o'tdi.
+                        </p>
+                        <div class="event-actions">
+                            <button class="btn btn-primary">Batafsil</button>
+                            <button class="btn btn-outline">
+                                <i class="fas fa-images"></i> Foto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Event 3 - Video bilan -->
+                <div class="event-card">
+                    <div class="event-media">
+                        <video poster="">
+                            <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                        </video>
+                        <div class="play-btn">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <div class="event-date">10.05.2023</div>
+                    </div>
+                    <div class="event-info">
+                        <h3>Sport festival</h3>
+                        <div class="event-meta">
+                            <span><i class="fas fa-clock"></i> 14:00 - 18:00</span>
+                            <span><i class="fas fa-map-marker-alt"></i> Sport majmuasi</span>
+                        </div>
+                        <p class="event-desc">
+                            Universitetimizda yillik sport festivali bo'lib o'tdi. Futbol, voleybol, basketbol va boshqa sport turlari bo'yicha musobaqalar.
+                        </p>
+                        <div class="event-actions">
+                            <button class="btn btn-primary">Batafsil</button>
+                            <button class="btn btn-outline video-btn" data-video="https://samplelib.com/lib/preview/mp4/sample-5s.mp4">
+                                <i class="fas fa-video"></i> Ko'rish
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="upcoming-section">
+            <div class="section-title">
+                <h2>Oldindan Rejalashtirilgan Tadbirlar</h2>
+            </div>
+            
+            <div class="upcoming-event">
+                <div class="upcoming-media">
+                    <video poster="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80">
+                        <source src="https://samplelib.com/lib/preview/mp4/sample-5s.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="upcoming-content">
+                    <h3>Yangi O'quv Yili Ochilishi</h3>
+                    <div class="upcoming-meta">
+                        <span><i class="fas fa-calendar-day"></i> 01.09.2023</span>
+                        <span><i class="fas fa-clock"></i> 09:00 dan</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Markaziy maydon</span>
+                    </div>
+                    <p class="upcoming-desc">
+                        Universitetimizda 2023-2024 o'quv yilining tantanali ochilish marosimi bo'lib o'tadi. Barcha talabalar, o'qituvchilar va mehmonlar taklif etiladi. Marosimda universitet rahbariyati, taniqli mehmonlar va talabalar ishtirok etadi.
+                    </p>
+                    <div>
+                        <button class="btn btn-primary" style="padding: 12px 25px;">Ishtirok Uchun Ro'yxatdan O'tish</button>
+                    </div>
+                </div>
+            </div>
+        
+           <section class="student-creations-section py-20">
+  <div class="section-title text-center mb-12">
+    <h2>🎨 Talabalar Ijodiy Ishlari</h2>
+    <p class="text-gray-600 max-w-xl mx-auto">
+      Universitetimiz talabalarining san’at, video va boshqa ijodiy ishlari namunalari.
+    </p>
+  </div>
+
+  <div class="student-creations-grid grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto px-4" data-aos="fade-up">
+    <!-- Video ish 1 -->
+    <div class="creation-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-right" data-aos-delay="100">
+      <video controls class="w-full h-48 object-cover" poster="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=60">
+        <source src="mymovie.mp4" type="video/mp4" />
+        Sizning brauzeringiz video formatini qo‘llab-quvvatlamaydi.
+      </video>
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1 text-purple-700">Universitet Tadbirlardan lavhalar</h3>
+        <p class="text-gray-700 text-sm">Nilufar Xasanova,</p>
+      </div>
+    </div>
+
+    <!-- Video ish 2 -->
+    <div class="creation-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-up" data-aos-delay="200">
+      <video controls class="w-full h-48 object-cover" poster="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=800&q=60">
+        <source src="ijodiymovie.mp4" type="video/mp4" />
+       
+      </video>
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1 text-purple-700">Talabalar ijodiy ishlari</h3>
+        <p class="text-gray-700 text-sm">Aziza Rasulova,</p>
+      </div>
+    </div>
+
+    <!-- Rasm ish -->
+    <div class="creation-card bg-white rounded-xl shadow-lg overflow-hidden transform transition duration-500 hover:scale-105 hover:shadow-2xl" data-aos="fade-left" data-aos-delay="300">
+      <img src="rasm4.jpg" alt="Talaba Rasm" class="w-full h-48 object-cover" />
+      <div class="p-4">
+        <h3 class="text-xl font-semibold mb-1 text-purple-700">Universtet Ochiq darslari  </h3>
+        <p class="text-gray-700 text-sm">Muhammad Ismoilov,</p>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .student-creations-section {
+      background: linear-gradient(135deg, #f3e8ff 0%, #ffffff 100%);
+    }
+
+    .creation-card video,
+    .creation-card img {
+      border-bottom: 3px solid #eeeaf798; /* purple-500 */
+      border-radius: 0 0 12px 12px;
+    }
+
+    .creation-card h3 {
+      transition: color 0.3s ease;
+    }
+
+    .creation-card:hover h3 {
+      color: #f6f3fc86; /* hover purple */
+    }
+  </style>
+</section>
+
+<!-- AOS kutubxonasini headga qo'shing: -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true,
+  });
+</script>
+
+
+  
+
+
+
+
+
+
+
+</section>
+    </div>
+    
+    <!-- Video Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <video controls id="modalVideo" style="width: 100%;">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+    
+    <script>
+        // Scroll animatsiyalari
+        document.addEventListener('DOMContentLoaded', function() {
+            // Header animatsiyasi
+            const header = document.querySelector('header');
+            let lastScroll = 0;
+            
+            window.addEventListener('scroll', function() {
+                const currentScroll = window.pageYOffset;
+                
+                if (currentScroll <= 0) {
+                    header.style.transform = 'translateY(0)';
+                    header.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.1)';
+                } 
+                
+                if (currentScroll > lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(-100%)';
+                } else if (currentScroll < lastScroll && currentScroll > 100) {
+                    header.style.transform = 'translateY(0)';
+                    header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.2)';
+                }
+                
+                lastScroll = currentScroll;
+            });
+            
+            // Tablarni almashtirish
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+            
+            // Video modalini ochish
+            const videoBtns = document.querySelectorAll('.video-btn');
+            const modal = document.getElementById('videoModal');
+            const modalVideo = document.getElementById('modalVideo');
+            const closeModal = document.querySelector('.close-modal');
+            
+            videoBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const videoSrc = this.getAttribute('data-video');
+                    modalVideo.src = videoSrc;
+                    modal.classList.add('show');
+                    modalVideo.play();
+                });
+            });
+            
+            closeModal.addEventListener('click', function() {
+                modal.classList.remove('show');
+                modalVideo.pause();
+            });
+            
+            // Modal tashqarisiga bosganda yopish
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                    modalVideo.pause();
+                }
+            });
+            
+            // Event kartalariga hover effekti
+            const eventCards = document.querySelectorAll('.event-card');
+            
+            eventCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                });
+            });
+            
+            // Play button hover effekti
+            const playBtns = document.querySelectorAll('.play-btn');
+            
+            playBtns.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const video = this.closest('.event-media').querySelector('video');
+                    const videoSrc = video.querySelector('source').src;
+                    
+                    modalVideo.src = videoSrc;
+                    modal.classList.add('show');
+                    modalVideo.play();
+                });
+            });
+        });
+    </script> 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <!-- Rektor va Prorektorlar bo'limi -->
+<section id="leadership" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12 text-blue-800">Rahbariyat</h2>
+    
+    <!-- Rektor -->
+    <div class="leader-card bg-white rounded-xl shadow-lg overflow-hidden mb-12 transition-all duration-500 hover:shadow-xl hover:-translate-y-2">
+      <div class="md:flex">
+        <div class="md:w-1/3 relative overflow-hidden">
+          <img src="https://via.placeholder.com/400x500" alt="Rektor" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-500 flex items-end p-6">
+            <h3 class="text-white text-xl font-semibold">Prof. Ism Familiya</h3>
+          </div>
+        </div>
+        <div class="md:w-2/3 p-8">
+          <h3 class="text-2xl font-bold text-blue-700 mb-2">Rektor</h3>
+          <h4 class="text-xl font-semibold mb-4">Prof. Ism Familiya</h4>
+          <div class="border-l-4 border-blue-500 pl-4 mb-6">
+            <p class="text-gray-600 italic">"Universitetimizni rivojlantirish va talabalarning bilim darajasini oshirish bizning asosiy vazifamizdir."</p>
+          </div>
+          <p class="text-gray-700 mb-4">1975-yilda tug'ilgan. 1997-yilda ... universitetini tamomlagan. 2005-yilda falsafa fanlari doktori ilmiy darajasini olgan.</p>
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="#" class="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">Biografiya</a>
+            <a href="#" class="px-4 py-2 border border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 transition-colors">Xabarlar</a>
+            <a href="#" class="px-4 py-2 border border-gray-300 text-gray-700 rounded-lg hover:bg-gray-100 transition-colors">Qabul kunlari</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Prorektorlar -->
+    <h3 class="text-2xl font-bold text-center mb-8 text-blue-800">Prorektorlar</h3>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Prorektor 1 -->
+      <div class="vice-leader-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="h-64 overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Prorektor 1" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-blue-700">O'quv ishlari bo'yicha prorektor</h4>
+          <h5 class="text-xl font-bold mb-2">Prof. Ism Familiya</h5>
+          <p class="text-gray-600 mb-4">1978-yilda tug'ilgan. 2000-yilda ... universitetini tamomlagan.</p>
+          <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition-colors">
+            Batafsil
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Prorektor 2 -->
+      <div class="vice-leader-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="h-64 overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Prorektor 2" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-blue-700">Ilmiy ishlar bo'yicha prorektor</h4>
+          <h5 class="text-xl font-bold mb-2">Prof. Ism Familiya</h5>
+          <p class="text-gray-600 mb-4">1980-yilda tug'ilgan. 2002-yilda ... universitetini tamomlagan.</p>
+          <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition-colors">
+            Batafsil
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Prorektor 3 -->
+      <div class="vice-leader-card bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+        <div class="h-64 overflow-hidden">
+          <img src="https://via.placeholder.com/400x300" alt="Prorektor 3" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+        </div>
+        <div class="p-6">
+          <h4 class="text-lg font-semibold text-blue-700">Ma'rifiy ishlar bo'yicha prorektor</h4>
+          <h5 class="text-xl font-bold mb-2">Prof. Ism Familiya</h5>
+          <p class="text-gray-600 mb-4">1976-yilda tug'ilgan. 1998-yilda ... universitetini tamomlagan.</p>
+          <a href="#" class="text-blue-600 hover:text-blue-800 font-medium inline-flex items-center transition-colors">
+            Batafsil
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+
+</section>
+
+<style>
+  body {
+    background: #f0f4ff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0; padding: 50px 20px;
+    color: #333;
+  }
+
+  h2 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin-bottom: 50px;
+    color: #4f46e5; /* To‘q binafsha */
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  .teachers-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+    gap: 30px;
+  }
+
+  .teacher-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(79, 70, 229, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .teacher-card:hover {
+    transform: translateY(-15px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(79, 70, 229, 0.3);
+  }
+
+  .teacher-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-bottom: 4px solid #6366f1; /* Binafsha */
+    border-radius: 0 0 12px 12px;
+    transition: transform 0.4s ease;
+  }
+
+  .teacher-card:hover .teacher-img {
+    transform: scale(1.1) rotate(2deg);
+  }
+
+  .teacher-name {
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 15px 0 5px 0;
+    color: #3730a3;
+  }
+
+  .teacher-position {
+    font-size: 0.95rem;
+    color: #6b7280;
+    font-style: italic;
+  }
+</style>
+<h2>Universitet O‘qituvchilari</h2>
+
+<div class="teachers-grid">
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/10.jpg" alt="O‘qituvchi 1" />
+    <div class="teacher-name">Abdulla Karimov</div>
+    <div class="teacher-position">Fizika professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/11.jpg" alt="O‘qituvchi 2" />
+    <div class="teacher-name">Nilufar Sobirova</div>
+    <div class="teacher-position">Matematika murabbiyi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/12.jpg" alt="O‘qituvchi 3" />
+    <div class="teacher-name">Rustam Jalolov</div>
+    <div class="teacher-position">Tarix mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/13.jpg" alt="O‘qituvchi 4" />
+    <div class="teacher-name">Madina Egamberdieva</div>
+    <div class="teacher-position">Tilshunos</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/14.jpg" alt="O‘qituvchi 5" />
+    <div class="teacher-name">Olimjon Rahmatov</div>
+    <div class="teacher-position">Kimyo mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/15.jpg" alt="O‘qituvchi 6" />
+    <div class="teacher-name">Gulchehra Toshpulatova</div>
+    <div class="teacher-position">Biologiya professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/16.jpg" alt="O‘qituvchi 7" />
+    <div class="teacher-name">Jasur Qodirov</div>
+    <div class="teacher-position">Informatika mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/17.jpg" alt="O‘qituvchi 8" />
+    <div class="teacher-name">Dilnoza Axmedova</div>
+    <div class="teacher-position">Falsafa professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/18.jpg" alt="O‘qituvchi 9" />
+    <div class="teacher-name">Alisher Nematov</div>
+    <div class="teacher-position">Psixologiya mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/19.jpg" alt="O‘qituvchi 10" />
+    <div class="teacher-name">Malika Sharipova</div>
+    <div class="teacher-position">Jurnalistika professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/20.jpg" alt="O‘qituvchi 11" />
+    <div class="teacher-name">Anvar Toshmatov</div>
+    <div class="teacher-position">Geografiya mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/21.jpg" alt="O‘qituvchi 12" />
+    <div class="teacher-name">Saodat Akbarova</div>
+    <div class="teacher-position">Adabiyot professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/22.jpg" alt="O‘qituvchi 13" />
+    <div class="teacher-name">Bekzod Islomov</div>
+    <div class="teacher-position">Fizika mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/23.jpg" alt="O‘qituvchi 14" />
+    <div class="teacher-name">Zarina Qodirova</div>
+    <div class="teacher-position">Matematika professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/24.jpg" alt="O‘qituvchi 15" />
+    <div class="teacher-name">Shavkat Olimov</div>
+    <div class="teacher-position">Tarix mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/25.jpg" alt="O‘qituvchi 16" />
+    <div class="teacher-name">Nigora Matkarimova</div>
+    <div class="teacher-position">Tilshunos</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/26.jpg" alt="O‘qituvchi 17" />
+    <div class="teacher-name">Davron Ismoilov</div>
+    <div class="teacher-position">Kimyo professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/27.jpg" alt="O‘qituvchi 18" />
+    <div class="teacher-name">Madina Rasulova</div>
+    <div class="teacher-position">Biologiya mutaxassisi</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/men/28.jpg" alt="O‘qituvchi 19" />
+    <div class="teacher-name">Sherzodbek Qodirov</div>
+    <div class="teacher-position">Falsafa professor</div>
+  </div>
+
+  <div class="teacher-card">
+    <img class="teacher-img" src="https://randomuser.me/api/portraits/women/29.jpg" alt="O‘qituvchi 20" />
+    <div class="teacher-name">Gulshan Ergasheva</div>
+    <div class="teacher-position">Psixologiya mutaxassisi</div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+<body class="bg-gradient-to-br from-blue-100 to-white min-h-screen p-6">
+    <div class="max-w-7xl mx-auto">
+        <h1 class="text-3xl font-bold text-center text-blue-700 mb-10">Yo‘nalishlar va kontrakt narxlari</h1>
+
+        <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            <!-- Card Template -->
+            <!-- Kartalar quyida -->
+
+            <!-- 1. Iqtisodiyot -->
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Iqtisodiyot</h2>
+                <p class="text-gray-600 mb-1">Shifr: —</p>
+                <p class="text-green-700 font-bold text-lg">16 000 000 so‘m</p>
+            </div>
+
+            <!-- 2. Yurisprudensiya -->
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md border border-blue-500">
+                <h2 class="text-xl font-semibold mb-2">Yurisprudensiya</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B04210</p>
+                <p class="text-red-600 font-bold text-lg">16 000 000 so‘m</p>
+            </div>
+
+            <!-- 3. Xalqaro huquq -->
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md border border-blue-500">
+                <h2 class="text-xl font-semibold mb-2">Xalqaro huquq</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B04220</p>
+                <p class="text-red-600 font-bold text-lg">16 000 000 so‘m</p>
+            </div>
+
+            <!-- Qolganlari -->
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Biotexnologiya</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B05120</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Ekologiya</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B05210</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Axborot tizimi</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B06120</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Elektr energetikasi sanoati</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B07150</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Transport, uskunalari va texnologiyalari</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B07130</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Avtomatlashtirish va boshqarish</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B07110</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Boshlang‘ich ta’lim</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B01310</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Sun’iy intellekt texnologiyalari</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B06121</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Hisob va audit</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B04130</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+
+            <div class="transition transform hover:-translate-y-1 hover:shadow-xl bg-white rounded-lg p-6 shadow-md">
+                <h2 class="text-xl font-semibold mb-2">Turizm</h2>
+                <p class="text-gray-600 mb-1">Shifr: 6B11110</p>
+                <p class="text-green-700 font-bold text-lg">12 000 000 so‘m</p>
+            </div>
+        </div>
+    </div>
+</body>
+ <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="w-full h-80 md:h-96 bg-blue-100 rounded-lg relative overflow-hidden">
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="#2563EB" d="M47.7,-57.2C59.9,-45.8,66.8,-29.1,68.7,-12.1C70.6,4.9,67.5,22.2,58.5,35.8C49.5,49.5,34.6,59.5,17.8,65.2C1,70.9,-17.6,72.2,-33.6,65.7C-49.5,59.1,-62.8,44.7,-69.8,27.7C-76.8,10.7,-77.5,-8.9,-70.3,-24.8C-63.1,-40.7,-48,-52.8,-32.6,-62.4C-17.2,-72,-8.6,-79,4.3,-84.1C17.2,-89.2,35.5,-68.5,47.7,-57.2Z" transform="translate(100 100)" />
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-white text-center">
+                                    <div class="text-5xl font-bold mb-2">MA</div>
+                                    <div class="text-xl">Est. 1976</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-10 -right-10 w-40 h-40 bg-yellow-400 rounded-lg opacity-80 z-0"></div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Muxtor Avezov Universiteti haqida</h2>
+                    <div class="w-20 h-1 bg-blue-600 mb-6"></div>
+                    <p class="text-gray-600 mb-6">Muxtor Avezov Universiteti O'zbekistonning eng nufuzli oliy ta'lim muassasalaridan biri hisoblanadi. Universitetimiz 1976 yilda tashkil etilgan bo'lib, bugungi kunda zamonaviy ta'lim standartlari asosida faoliyat yuritmoqda.</p>
+                    <p class="text-gray-600 mb-6">Bizning maqsadimiz - yuqori malakali mutaxassislarni tayyorlash, ilmiy tadqiqotlarni rivojlantirish va jamiyat taraqqiyotiga hissa qo'shishdir.</p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-graduation-cap text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700">Sifatli ta'lim</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-flask text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700">Ilmiy tadqiqotlar</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-globe text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700">Xalqaro aloqalar</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                <i class="fas fa-users text-blue-600"></i>
+                            </div>
+                            <span class="text-gray-700">Kuchli jamoat</span>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        Biz bilan bog'laning
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+<!-- Call Center Section -->
+<section id="call-center" class="bg-gradient-to-br from-blue-100 to-white py-20 px-6 overflow-hidden">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center space-y-12 md:space-y-0 md:space-x-16" data-aos="fade-up">
+
+    <!-- Left: Animated Stylish Image -->
+    <div class="relative w-64 h-64 md:w-72 md:h-72 group" data-aos="zoom-in" data-aos-delay="100">
+      <!-- Background Glow -->
+      <div class="absolute inset-0 rounded-full bg-blue-300 blur-2xl opacity-20 animate-pulse"></div>
+
+      <!-- Rotating border on hover -->
+      <div class="absolute inset-0 rounded-full border-4 border-blue-400 opacity-30 group-hover:rotate-180 transition-all duration-1000 ease-in-out"></div>
+
+      <!-- Main Image with hover scale -->
+      <img src="call.jpg" alt="Call Center"
+        class="rounded-full border-4 border-white shadow-2xl w-full h-full object-cover z-10 relative transition-transform duration-500 group-hover:scale-105" />
+    </div>
+
+    <!-- Right: Text & Call-to-action -->
+    <div class="flex-1" data-aos="fade-left" data-aos-delay="200">
+      <h2 class="text-4xl font-bold text-gray-800 mb-4 leading-tight">
+        Universitet call-center bilan <span class="text-blue-600">bog‘laning</span>
+      </h2>
+      <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+        Universitetimiz <strong>Call Center</strong> xizmati sizga 24/7 yordam berishga tayyor. O‘qish, kontraktlar, hujjatlar va boshqa savollar bo‘yicha tezkor javob oling.
+      </p>
+
+      <div class="flex flex-col sm:flex-row sm:items-center sm:space-x-6 space-y-4 sm:space-y-0">
+        <!-- Contact Numbers -->
+        <div class="text-blue-700 font-bold text-xl space-y-1">
+          <div class="flex items-center space-x-2">
+            <span>📞</span>
+            <span><a href="tel:+998996844483" class="hover:underline">+998 99 684 44 83</a></span>
+          </div>
+          <div class="flex items-center space-x-2">
+            <span>📞</span>
+            <span><a href="tel:+998931438858" class="hover:underline">+998 93 143 88 58</a></span>
+          </div>
+        </div>
+
+        <!-- Call-to-action Button -->
+        <a href="tel:+998712000001"
+          class="bg-blue-600 text-white px-6 py-3 rounded-full shadow-md hover:bg-blue-700 transition-transform transform hover:scale-105 duration-300">
+          Hozir qo‘ng‘iroq qiling
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</div>
+</section>
+
+<!--Kantak bolim bor-->
+
+<!-- Contact Section -->
+<section id="contact" class="py-20 bg-gradient-to-r from-blue-50 to-white">
+  <div class="container mx-auto px-4">
+    <!-- Title -->
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h2 class="text-4xl font-extrabold text-gray-800 mb-4">Biz bilan bog'laning</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Savollaringiz bormi? Biz sizga yordam berishga tayyormiz!</p>
+      <div class="w-24 h-1 bg-blue-600 mx-auto mt-6 rounded-full"></div>
+    </div>
+
+    <!-- Content -->
+    <div class="flex flex-col md:flex-row gap-12">
+      
+      <!-- Contact Form -->
+      <div class="md:w-1/2" data-aos="fade-right">
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-blue-700 mb-6">Xabar yuboring</h3>
+          <form class="space-y-6">
+            <div>
+              <label for="name" class="block text-gray-700 mb-2">Ismingiz</label>
+              <input type="text" id="name" placeholder="Ismingiz"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700 mb-2">Email</label>
+              <input type="email" id="email" placeholder="example@mail.com"
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition">
+            </div>
+            <div>
+              <label for="message" class="block text-gray-700 mb-2">Xabar</label>
+              <textarea id="message" rows="5" placeholder="Xabaringizni shu yerga yozing..."
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg transition transform hover:scale-105">
+              Yuborish
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Info -->
+      <div class="md:w-1/2 space-y-8" data-aos="fade-left">
+        <div class="bg-white p-8 rounded-3xl shadow-lg">
+          <h3 class="text-2xl font-semibold text-blue-700 mb-6">Bog'lanish ma'lumotlari</h3>
+          <ul class="space-y-4 text-gray-700">
+            <li class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M17.657 16.657L13.414 12.414a1 1 0 010-1.414l4.243-4.243M19 19l-6.586-6.586a2 2 0 010-2.828L19 3" />
+              </svg>
+              <div>
+                <h4 class="font-semibold">Manzil</h4>
+                <p>Muxtor Avezov ko'chasi, 15-uy, Toshkent</p>
+              </div>
+            </li>
+            <li class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 5h12M9 3v2m-6 6h18m-2 6h2M6 13h.01M6 16h.01M6 19h.01" />
+              </svg>
+              <div>
+                <h4 class="font-semibold">Telefon</h4>
+                <p>+998 71 123 45 67</p>
+              </div>
+            </li>
+            <li class="flex items-start space-x-4">
+              <svg class="w-6 h-6 text-blue-600 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M16 12H8m0 0l4 4m-4-4l4-4" />
+              </svg>
+              <div>
+                <h4 class="font-semibold">Email</h4>
+                <p>info@avezov.edu.uz</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-8 rounded-3xl shadow-lg" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="text-2xl font-semibold text-blue-700 mb-6">Ish vaqti</h3>
+          <ul class="text-gray-700 space-y-2">
+            <li class="flex justify-between">
+              <span>Dushanba - Juma:</span>
+              <span class="font-semibold text-gray-800">9:00 - 18:00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Shanba:</span>
+              <span class="font-semibold text-gray-800">9:00 - 14:00</span>
+            </li>
+            <li class="flex justify-between">
+              <span>Yakshanba:</span>
+              <span class="font-semibold text-red-600">Yopiq</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--bu yerda tag qismi-->
+
+<!-- Footer -->
+    <footer class="bg-blue-900 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="h-10 w-10 bg-white rounded-full flex items-center justify-center">
+                            <span class="text-blue-800 font-bold text-xl">MA</span>
+                        </div>
+                        <span class="font-bold text-xl">Muxtor Avezov Universiteti</span>
+                    </div>
+                    <p class="text-blue-200 mb-6">Zamonaviy ta'lim, yorqin kelajak. Bizning universitetimiz sizning muvaffaqiyatingiz uchun poydevor.</p>
+                  <div class="flex space-x-4">
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/profile.php?id=61566929549494" target="_blank"
+     class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300">
+    <i class="fab fa-facebook-f"></i>
+  </a>
+
+  <!-- Telegram -->
+  <a href="https://t.me/auezov_university_chirchiq" target="_blank"
+     class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300">
+    <i class="fab fa-telegram-plane"></i>
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/auezov_university_chirchiq" target="_blank"
+     class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300">
+    <i class="fab fa-instagram"></i>
+  </a>
+
+  <!-- LinkedIn -->
+  <a href="#" target="_blank"
+     class="w-10 h-10 bg-blue-800 hover:bg-blue-700 rounded-full flex items-center justify-center transition-all duration-300">
+    <i class="fab fa-linkedin-in"></i>
+  </a>
+</div>
+
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Tezkor havolalar</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-blue-200 hover:text-white transition-all duration-300">Bosh sahifa</a></li>
+                        <li><a href="#faculties" class="text-blue-200 hover:text-white transition-all duration-300">Fakultetlar</a></li>
+                        <li><a href="#about" class="text-blue-200 hover:text-white transition-all duration-300">Biz haqimizda</a></li>
+                        <li><a href="#contact" class="text-blue-200 hover:text-white transition-all duration-300">Aloqa</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Fakultetlar</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-all duration-300">Iqtisod </a></li>
+                        <li><a href="#" class="text-blue-200 hover:text-white transition-all duration-300">Huquqshunoslik</a></li>
+
+
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-6">Bog'lanish</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-3 text-blue-300"></i>
+                            <span class="text-blue-200">Muxtor Avezov ko'chasi, 15-uy, Toshkent</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-3 text-blue-300"></i>
+                            <span class="text-blue-200">+998 71 123 45 67</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3 text-blue-300"></i>
+                            <span class="text-blue-200">info@avezov.edu.uz</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-blue-800 mt-12 pt-8 text-center">
+                <p class="text-blue-200">&copy; 2023 Muxtor Avezov Universiteti. Barcha huquqlar himoyalangan.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-lg', 'py-2');
+                navbar.classList.remove('py-3');
+            } else {
+                navbar.classList.remove('shadow-lg', 'py-2');
+                navbar.classList.add('py-3');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Stats counter animation
+        const counters = document.querySelectorAll('.stats-counter');
+        const speed = 200;
+        
+        const animateCounters = () => {
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const count = parseInt(counter.innerText);
+                const increment = Math.trunc(target / speed);
+                
+                if (count < target) {
+                    counter.innerText = count + increment;
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        };
+        
+        // Start counter animation when in view
+        const observerOptions = {
+            threshold: 0.5
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateCounters();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+        
+        if (counters.length > 0) {
+            observer.observe(counters[0].parentElement.parentElement);
+        }
+        
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+            
+            if (name && email && message) {
+                // In a real application, you would send this data to a server
+                alert('Xabaringiz yuborildi! Tez orada siz bilan bog\'lanamiz.');
+                contactForm.reset();
+            } else {
+                alert('Iltimos, barcha maydonlarni to\'ldiring.');
+            }
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'94c9e24e24e7767a',t:'MTc0OTQwMTM4Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<!-- AOS CSS -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+<!-- AOS JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
+</html>
